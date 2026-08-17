@@ -191,62 +191,69 @@ section h2 {
     line-height: 1.8;
 }
 
-/* Rentals Section */
-.rentals {
+/* Our Agents Section */
+.agents {
     background-color: white;
 }
 
-.rentals-grid {
+.agents-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-.rental-card {
+.agent-card {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: var(--transition);
+    text-align: center;
 }
 
-.rental-card:hover {
+.agent-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.rental-image {
-    height: 200px;
+.agent-image {
+    height: 250px;
     background-size: cover;
     background-position: center;
 }
 
-.rental-card > div:not(.rental-image) {
-    padding: 1.5rem;
-}
-
-.rental-card h3 {
+.agent-card h3 {
     font-size: 1.3rem;
-    margin: 1rem 0 0.5rem 0;
+    margin: 1.5rem 1rem 0.5rem 1rem;
     color: var(--primary-color);
 }
 
-.rental-card .price {
-    font-size: 1.5rem;
-    font-weight: 700;
+.agent-title {
     color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.rental-card p {
-    color: var(--text-light);
+    font-weight: 600;
+    margin: 0 1rem 1rem 1rem;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
 }
 
-.rental-card .btn {
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
+.agent-bio {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0 1rem 1rem 1rem;
+    line-height: 1.6;
+}
+
+.agent-contact {
+    margin: 0 1rem 1rem 1rem;
+    padding-bottom: 1rem;
+}
+
+.agent-contact a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.agent-contact a:hover {
+    text-decoration: underline;
 }
 
 /* Landlords Section */
@@ -316,7 +323,7 @@ section h2 {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
@@ -329,38 +336,6 @@ section h2 {
 .about-text h3 {
     color: var(--primary-color);
     margin: 2rem 0 1rem 0;
-}
-
-.team-preview h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-}
-
-.team-member {
-    text-align: center;
-}
-
-.member-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-}
-
-.team-member h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.team-member p {
-    color: var(--text-light);
-    font-size: 0.9rem;
 }
 
 /* Contact Section */
@@ -490,7 +465,6 @@ section h2 {
     }
 
     .landlords-content,
-    .about-content,
     .contact-content {
         grid-template-columns: 1fr;
     }
@@ -499,8 +473,8 @@ section h2 {
         grid-template-columns: 1fr;
     }
 
-    .team-grid {
-        grid-template-columns: 1fr;
+    .agents-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
@@ -530,5 +504,9 @@ section h2 {
     section h2 {
         font-size: 1.5rem;
         margin-bottom: 2rem;
+    }
+
+    .agents-grid {
+        grid-template-columns: 1fr;
     }
 }
