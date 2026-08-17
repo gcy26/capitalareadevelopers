@@ -87,18 +87,33 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 100px 20px;
+    padding: 0;
     text-align: center;
-    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero-content {
     width: 100%;
+}
+
+.hero-images {
+    width: 100%;
+}
+
+.hero-image-card {
+    width: 100%;
+    line-height: 0;
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .hero-content h3 {
@@ -401,11 +416,6 @@ section h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        padding: 80px 20px;
-        min-height: 250px;
-    }
-
     .hero-content h3 {
         font-size: 1.6rem;
     }
@@ -431,11 +441,6 @@ section h2 {
     .nav-menu {
         gap: 0.5rem;
         font-size: 0.85rem;
-    }
-
-    .hero {
-        padding: 60px 15px;
-        min-height: 200px;
     }
 
     .hero-content h3 {
