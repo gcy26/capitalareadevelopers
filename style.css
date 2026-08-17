@@ -89,9 +89,9 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 200px 20px;
+    padding: 100px 20px;
     text-align: center;
-    min-height: 600px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,15 +101,8 @@ body {
     width: 100%;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
 .hero-content h3 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 400;
     opacity: 0.95;
     letter-spacing: 0.5px;
@@ -409,16 +402,12 @@ section h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        padding: 150px 20px;
-        min-height: 500px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
+        padding: 80px 20px;
+        min-height: 250px;
     }
 
     .hero-content h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     section h2 {
@@ -445,16 +434,12 @@ section h2 {
     }
 
     .hero {
-        padding: 100px 15px;
-        min-height: 400px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
+        padding: 60px 15px;
+        min-height: 200px;
     }
 
     .hero-content h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .btn {
