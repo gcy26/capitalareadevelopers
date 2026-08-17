@@ -191,74 +191,9 @@ section h2 {
     line-height: 1.8;
 }
 
-/* Our Agents Section */
-.agents {
-    background-color: white;
-}
-
-.agents-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.agent-card {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: var(--transition);
-    text-align: center;
-}
-
-.agent-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.agent-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-.agent-card h3 {
-    font-size: 1.3rem;
-    margin: 1.5rem 1rem 0.5rem 1rem;
-    color: var(--primary-color);
-}
-
-.agent-title {
-    color: var(--secondary-color);
-    font-weight: 600;
-    margin: 0 1rem 1rem 1rem;
-    font-size: 0.95rem;
-}
-
-.agent-bio {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin: 0 1rem 1rem 1rem;
-    line-height: 1.6;
-}
-
-.agent-contact {
-    margin: 0 1rem 1rem 1rem;
-    padding-bottom: 1rem;
-}
-
-.agent-contact a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.agent-contact a:hover {
-    text-decoration: underline;
-}
-
 /* About Section */
 .about {
-    background-color: var(--light-bg);
+    background-color: white;
 }
 
 .about-content {
@@ -299,7 +234,7 @@ section h2 {
 }
 
 .stat-item {
-    background-color: white;
+    background-color: var(--light-bg);
     padding: 1.5rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -318,9 +253,46 @@ section h2 {
     font-size: 0.95rem;
 }
 
+/* Areas Served Section */
+.areas-served {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.area-column {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.area-column h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.area-column ul {
+    list-style: none;
+}
+
+.area-column li {
+    color: var(--text-light);
+    padding: 0.4rem 0;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.area-column li:hover {
+    color: var(--secondary-color);
+}
+
 /* Contact Section */
 .contact {
-    background-color: white;
+    background-color: var(--light-bg);
 }
 
 .contact-content {
@@ -329,10 +301,8 @@ section h2 {
     gap: 3rem;
 }
 
-.contact-info h3 {
-    color: var(--primary-color);
+.contact-info {
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
 }
 
 .info-item {
@@ -361,7 +331,7 @@ section h2 {
 
 /* Contact Form */
 .contact-form {
-    background-color: var(--light-bg);
+    background-color: white;
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -452,8 +422,8 @@ section h2 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .agents-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .areas-served {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -485,11 +455,11 @@ section h2 {
         margin-bottom: 2rem;
     }
 
-    .agents-grid {
+    .stats-inline {
         grid-template-columns: 1fr;
     }
 
-    .stats-inline {
+    .areas-served {
         grid-template-columns: 1fr;
     }
 }
