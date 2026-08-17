@@ -256,69 +256,9 @@ section h2 {
     text-decoration: underline;
 }
 
-/* Landlords Section */
-.landlords {
-    background-color: var(--light-bg);
-}
-
-.landlords-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.landlords-text h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.landlords-text p {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-}
-
-.benefits-list {
-    list-style: none;
-    margin: 1.5rem 0;
-}
-
-.benefits-list li {
-    padding: 0.5rem 0;
-    color: var(--text-dark);
-    font-weight: 500;
-}
-
-.landlords-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.stat {
-    background-color: white;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.stat h4 {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    color: var(--text-light);
-    font-weight: 600;
-}
-
 /* About Section */
 .about {
-    background-color: white;
+    background-color: var(--light-bg);
 }
 
 .about-content {
@@ -336,11 +276,51 @@ section h2 {
 .about-text h3 {
     color: var(--primary-color);
     margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.benefits-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.benefits-list li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Inline Stats */
+.stats-inline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
 .contact {
-    background-color: var(--light-bg);
+    background-color: white;
 }
 
 .contact-content {
@@ -381,7 +361,7 @@ section h2 {
 
 /* Contact Form */
 .contact-form {
-    background-color: white;
+    background-color: var(--light-bg);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -464,13 +444,12 @@ section h2 {
         font-size: 2rem;
     }
 
-    .landlords-content,
     .contact-content {
         grid-template-columns: 1fr;
     }
 
-    .landlords-stats {
-        grid-template-columns: 1fr;
+    .stats-inline {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .agents-grid {
@@ -507,6 +486,10 @@ section h2 {
     }
 
     .agents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-inline {
         grid-template-columns: 1fr;
     }
 }
