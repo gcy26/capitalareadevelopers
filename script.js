@@ -1,3 +1,70 @@
+// Slideshow functionality
+let slideIndex = 1;
+let slideTimer;
+
+// Initialize slideshow on page load
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(slideIndex);
+    startSlideshow();
+    console.log('Capital Area Developers website loaded successfully!');
+});
+
+// Auto-advance slideshow every 5 seconds
+function startSlideshow() {
+    slideTimer = setInterval(function() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }, 5000);
+}
+
+// Stop slideshow timer when user manually changes slide
+function stopSlideshow() {
+    clearInterval(slideTimer);
+}
+
+// Restart slideshow after manual navigation
+function restartSlideshow() {
+    stopSlideshow();
+    startSlideshow();
+}
+
+// Navigate to specific slide
+function currentSlide(n) {
+    slideIndex = n;
+    showSlide(slideIndex);
+    restartSlideshow();
+}
+
+// Display the slide
+function showSlide(n) {
+    let slides = document.getElementsByClassName('hero-slide');
+    let indicators = document.getElementsByClassName('indicator');
+    
+    // Wrap around if we've gone past the last slide
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+    }
+    
+    // Remove active class from all indicators
+    for (let i = 0; i < indicators.length; i++) {
+        indicators[i].classList.remove('active');
+    }
+    
+    // Show current slide and highlight corresponding indicator
+    if (slides.length > 0) {
+        slides[slideIndex - 1].classList.add('active');
+    }
+    
+    if (indicators.length > 0) {
+        indicators[slideIndex - 1].classList.add('active');
+    }
+}
+
 // Form submission handler
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -40,19 +107,21 @@ ${message}
 }
 
 // Smooth scroll enhancement
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
-        }
+        });
     });
 });
 
@@ -64,9 +133,4 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
     }
-});
-
-// Mobile menu toggle (optional - for future mobile menu implementation)
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Capital Area Developers website loaded successfully!');
 });
