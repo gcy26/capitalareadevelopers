@@ -25,7 +25,16 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <img src="home-services.jpg" alt="Property Consulting Services" class="hero-image">
+            <div class="hero-slideshow">
+                <img src="home-services.jpg" alt="Property Consulting Services" class="hero-image hero-slide active">
+                <img src="leasing-services.jpg" alt="Leasing Services" class="hero-image hero-slide">
+                <img src="sell-buy-services.jpg" alt="Buy and Sell Services" class="hero-image hero-slide">
+            </div>
+            <div class="slideshow-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
         </div>
     </section>
 
