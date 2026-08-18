@@ -89,9 +89,9 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 30px 20px;
+    padding: 20px 0;
     text-align: center;
-    min-height: 0;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +99,22 @@ body {
 
 .hero-content {
     width: 100%;
+    max-width: 1000px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 /* Buttons */
@@ -395,7 +411,11 @@ section h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .hero-image {
+        max-width: 100%;
     }
 
     section h2 {
@@ -422,7 +442,11 @@ section h2 {
     }
 
     .hero {
-        padding: 15px;
+        padding: 10px;
+    }
+
+    .hero-image {
+        max-width: 100%;
     }
 
     .btn {
