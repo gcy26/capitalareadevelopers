@@ -101,6 +101,18 @@ body {
     width: 100%;
 }
 
+.hero-image-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
 .hero-content h3 {
     font-size: 2.2rem;
     font-weight: 400;
