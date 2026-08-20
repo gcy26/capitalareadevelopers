@@ -94,7 +94,7 @@ ${message}
     `.trim();
     
     // Open mailto link
-    const mailtoLink = `mailto:info@capitalareadevelopers.com?subject=Contact Form: ${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:gyadlapalli@gmail.com?subject=Contact Form: ${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
     
     // Reset form
